@@ -24,34 +24,23 @@ Check the packages needed or simply run the command
 ❱❱❱ pip install -r requirements.txt
 ```
 
-## Resources needed
-You can also download the well trained [**model**](https://drive.google.com/open?id=1ufGjlp2yGQ7Z--scYVEkvlu3hm-ec3dD) and unzip to the project home directory
+## Data Preprocessing
+`data_preprocess.ipynb` contains necessary preprocessing steps. Note that same_*.txt are the one with score(produced by CNN scorer) and should be placed in `\sensational_headline\dataset\sensation_lcsts`, and segment_*.txt are the one without score, which should be placed in `\sensational_headline\dataset\lcsts`.
 
-To train and run your model, you need [**datasets**](https://drive.google.com/open?id=1ufGjlp2yGQ7Z--scYVEkvlu3hm-ec3dD) and unzip to the project home directory
+## Resources
+Fine-tuned model on Yusan data can be downloaded at [**here**](https://drive.google.com/file/d/1m8gQt3G7rSrZeoMUPoTNt4sSVT5TpLu1/view?usp=sharing) and unzip to the sensational_headline\sensation_save\Rl directory.
 
-We also use the pretrained Chinese embedding in from [**this website**](https://github.com/Embedding/Chinese-Word-Vectors) or you can directly download from [**here**](https://pan.baidu.com/s/10bhJpaXMCUK02nHvRAttqA)
+(Optional) To train and run your model from scratch, you need [**datasets**](https://drive.google.com/open?id=1ufGjlp2yGQ7Z--scYVEkvlu3hm-ec3dD) and unzip to the project home directory
 
+Pretrained Chinese embedding download: [**click me**](https://github.com/Embedding/Chinese-Word-Vectors) and unzip to the sensational_headline\ directory.
 
 ## Experiment
-***Quick Result***
-
-To skip training, please check 
-
-Pointer-Gen: save/PointerAttn/Pointer_Gen/test_prediction
-
-Pointer-Gen+RL-ROUGE: save/Rl/Pointer_Gen_RL_ROUGE/test_prediction
-
-Pointer-Gen+RL-SEN: save/Rl/Pointer_Gen_RL_SEN/test_prediction
-
-Pointer-Gen+ARL-SEN:  save/Rl/Pointer_Gen_ARL_SEN/test_prediction
-
-
 
 ***Fine-tune***
 
 Pointer-Gen+ARL-SEN
 ```console
-❱❱❱ python python fine_tune_sensation_generation.py -rl_model_path save/Rl/Pointer_Gen_ARL_SEN/ -sensation_scorer_path save/sensation/512_0.9579935073852539/ -thd 0.1 -use_rl True -use_s_score 1 -batch_size 4 -eval_step 300
+❱❱❱ python fine_tune_sensation_generation.py -rl_model_path save/Rl/Pointer_Gen_ARL_SEN/ -sensation_scorer_path save/sensation/512_0.9579935073852539/ -thd 0.1 -use_rl True -use_s_score 1 -batch_size 4 -eval_step 300
 
 ```
 
