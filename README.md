@@ -19,7 +19,7 @@ This code has been written using python3 and PyTorch >= 0.4.0 and its built on t
 </pre>
 
 ## Dependency
-Check the packages needed or simply run the command
+Check the packages needed or simply run the command (pytorch version must == 0.4.0)
 ```console
 ❱❱❱ pip install -r requirements.txt
 ```
@@ -30,7 +30,7 @@ Check the packages needed or simply run the command
 ## Resources
 Fine-tuned model on Yusan data can be downloaded at [**here**](https://drive.google.com/file/d/1m8gQt3G7rSrZeoMUPoTNt4sSVT5TpLu1/view?usp=sharing) and unzip to the `\sensational_headline\sensation_save\Rl directory`.
 
-(Optional) To train and run your model from scratch, you need [**datasets**](https://drive.google.com/open?id=1ufGjlp2yGQ7Z--scYVEkvlu3hm-ec3dD) and unzip to the project home directory
+(Optional) To train and run your model from scratch, you will need [**datasets**](https://drive.google.com/open?id=1ufGjlp2yGQ7Z--scYVEkvlu3hm-ec3dD) and unzip to the project home directory
 
 Pretrained Chinese embedding download: [**click me**](https://github.com/Embedding/Chinese-Word-Vectors) and unzip to the project home directory.
 
@@ -51,3 +51,4 @@ Pointer-Gen+ARL-SEN
 ❱❱❱ python sensation_save.py -rl_model_path sensation_save/Rl/50000_4_350_500_0.0_1_1_birnn_pointer_attn_0.0001_adam_1.0_False_False_False_rl_no_cov_0.0_True_0.1_0.6436150074005127  -sensation_scorer_path save/sensation/512_0.9579935073852539/ -use_s_score 0 -thd 0.0 -use_rl True
 
 ```
+The generated ```test_prediction``` file is in ```generated title+reward / ground truth+sensation score / article``` format.
