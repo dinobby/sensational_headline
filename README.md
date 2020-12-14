@@ -28,11 +28,11 @@ Check the packages needed or simply run the command (pytorch version must == 0.4
 `data_preprocess.ipynb` contains necessary preprocessing steps. Note that same_\*.txt are the one with score(produced by CNN scorer) and should be placed in `\sensational_headline\dataset\sensation_lcsts`, and segment_\*.txt are the one without score, which should be placed in `\sensational_headline\dataset\lcsts`.
 
 ## Resources
-Fine-tuned model on Yusan data can be downloaded at [**here**](https://drive.google.com/file/d/1m8gQt3G7rSrZeoMUPoTNt4sSVT5TpLu1/view?usp=sharing) and unzip to the `\sensational_headline\sensation_save\Rl directory`.
+Fine-tuned model on Yusan data can be downloaded at [**here**](https://drive.google.com/file/d/1m8gQt3G7rSrZeoMUPoTNt4sSVT5TpLu1/view?usp=sharing) and unzip to the `\sensational_headline\sensation_save\Rl` directory.
 
 (Optional) To train and run your model from scratch, you will need [**datasets**](https://drive.google.com/open?id=1ufGjlp2yGQ7Z--scYVEkvlu3hm-ec3dD) and unzip to the project home directory
 
-Pretrained Chinese embedding download: [**click me**](https://github.com/Embedding/Chinese-Word-Vectors) and unzip to the project home directory.
+Pretrained Chinese embedding(weibo-bigram) can be downloaded at: [**click me**](https://drive.google.com/file/d/1gbJZxd43OryewP8v2aLU2hRlevB7IzSZ/view?usp=sharing) unzip it to the project home directory.
 
 ## Experiment
 
